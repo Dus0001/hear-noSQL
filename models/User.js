@@ -1,5 +1,4 @@
 const {Schema, model, Types} = require('mongoose');
-const moment = require('moment');
 
 UserSchema = new Schema({
     username: {
