@@ -109,4 +109,6 @@ const userController = {
             res.sendStatus(400)
         });
     }
-}
+};
+
+module.exports = userController;
