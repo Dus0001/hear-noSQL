@@ -3,7 +3,7 @@ const {Thought, User} = require('../models');
 const thoughtController = {
 
     getAllThoughts(req, res) {
-        Thought,find({})
+        Thought.find({})
         .then(dbThoughtData => res.json(dbThoughtData))
         .catch(err => {
             console.log(err);
@@ -55,7 +55,7 @@ const thoughtController = {
         .catch(err => res.json(err));
     },
 
-    deleteThought({ params, body}, res) {
+    deleteThought ({ params, body}, res) {
         Thought.findOneAndDelete({ _id: params.id })
         .then(deletedThought => {
             if (!deletedThought) {
